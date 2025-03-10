@@ -1,3 +1,5 @@
+#![windows_subsystem = "windows"]
+
 use std::process::Command;
 use win_hotkeys::HotkeyManager;
 use win_hotkeys::VKey;
@@ -7,8 +9,7 @@ fn main() {
    
     hkm.register_hotkey(VKey::Space, &[VKey::LWin], || {
         log::info!("Hotkey Win + Spacebar was pressed");
-        if let Err(e) = Command::new("cmd")
-            .args(&["/C", "start", "nu"])
+        if let Err(e) = Command::new("nu")
             .current_dir("C:\\Users\\brodi")
             .spawn()
 
