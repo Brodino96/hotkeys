@@ -1,0 +1,11 @@
+[package]
+name = "hotkeys"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+log = "0.4.26"
+win-hotkeys = "0.5.0"
+
+[build-dependencies]
+winres = "0.1.12"
